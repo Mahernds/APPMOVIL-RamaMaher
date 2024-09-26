@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { DataService } from '../../servicios/data.service'; // Importa el servicio
 
 @Component({
   selector: 'app-login',
@@ -13,18 +14,21 @@ export class LoginPage {
     password: ''
   };
 
-  constructor(private navCtrl: NavController) {}
+  constructor(private router: Router, private dataService: DataService) {} // Inyecta el servicio y Router
 
   onSubmit(form: NgForm) {
     if (form.valid) {
       console.log('Formulario válido, enviar datos al servidor');
-      this.navCtrl.navigateRoot('/home'); // Navega a la página de home si el login es exitoso
+
+      // Guarda el correo en el servicio
+      this.dataService.setCorreo(this.loginData.email);
+      this.dataService.setContrasena(this.loginData.password);
+
+
+      // Redirige a la página principal
+      this.router.navigate(['/home']);
     } else {
       console.log('Formulario inválido');
     }
   }
 }
-
-
-
-

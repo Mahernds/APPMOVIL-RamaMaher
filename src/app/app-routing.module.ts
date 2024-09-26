@@ -15,7 +15,14 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./paginas/login/login.module').then( m => m.LoginPageModule)
   },
-  
+  {
+    path: 'configuracion',
+    loadChildren: () => import('./paginas/configuracion/configuracion.module').then(m => m.ConfiguracionPageModule)
+  },
+  {
+    path: 'informacion-cuenta',
+    loadChildren: () => import('./paginas/informacion-cuenta/informacion-cuenta.module').then(m => m.InformacionCuentaPageModule)
+  },
   {
     path: 'register',
     loadChildren: () => import('./paginas/register/register.module').then(m => m.RegisterPageModule)
@@ -24,6 +31,15 @@ const routes: Routes = [
     path: 'cambiar-contrasena',
     loadChildren: () => import('./paginas/cambiar-contrasena/cambiar-contrasena.module').then( m => m.CambiarContrasenaPageModule)
   },
+  {
+    path: 'configuracion',
+    loadChildren: () => import('./paginas/configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
+  },
+  {
+    path: 'informacion-cuenta',
+    loadChildren: () => import('./paginas/informacion-cuenta/informacion-cuenta.module').then( m => m.InformacionCuentaPageModule)
+  },
+  
   
 
 ];
