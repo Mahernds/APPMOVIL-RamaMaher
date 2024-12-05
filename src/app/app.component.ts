@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+<<<<<<< HEAD
+=======
+  title='localStore'
+>>>>>>> 03623c9 (Primer commit)
   constructor() {}
 }

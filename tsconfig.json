@@ -2,6 +2,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+<<<<<<< HEAD
+=======
+    "allowSyntheticDefaultImports": true,
+>>>>>>> 03623c9 (Primer commit)
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -29,5 +33,9 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 03623c9 (Primer commit)
 }
