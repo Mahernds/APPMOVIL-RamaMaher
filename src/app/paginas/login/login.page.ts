@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
-import { DataService } from '../../servicios/data.service'; // Importa el servicio
-=======
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
@@ -12,7 +6,6 @@ import { Storage } from '@ionic/storage-angular';
 import { FirebaseLoginService } from 'src/app/services/firebase-login.service';
 import { ControladorService } from 'src/app/services/user-controller.service';
 import { EncryptionService } from 'src/app/encryption.service';  // Asegúrate de que esta ruta esté correcta
->>>>>>> 03623c9 (Primer commit)
 
 @Component({
   selector: 'app-login',
@@ -20,30 +13,6 @@ import { EncryptionService } from 'src/app/encryption.service';  // Asegúrate d
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
-<<<<<<< HEAD
-  loginData = {
-    email: '',
-    password: ''
-  };
-
-  constructor(private router: Router, private dataService: DataService) {} // Inyecta el servicio y Router
-
-  onSubmit(form: NgForm) {
-    if (form.valid) {
-      console.log('Formulario válido, enviar datos al servidor');
-
-      // Guarda el correo en el servicio
-      this.dataService.setCorreo(this.loginData.email);
-      this.dataService.setContrasena(this.loginData.password);
-
-
-      // Redirige a la página principal
-      this.router.navigate(['/home']);
-    } else {
-      console.log('Formulario inválido');
-    }
-  }
-=======
 
   usuario: string = "";
   password: string = "";
@@ -150,5 +119,4 @@ export class LoginPage {
     console.log("restablecer-contrasena");
     this.route.navigate(["/restablecer-contrasena"]);
   }
->>>>>>> 03623c9 (Primer commit)
 }
